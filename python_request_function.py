@@ -42,7 +42,7 @@ class TestString(unittest.TestCase):
     #def test_request_function6(self):
     #    self.assertEqual(first_req_fun(),'{\n  "authenticated": true, \n  "user": "user"\n}\n')
 
-    def test_request_function6(self):
+    def test_request_function7(self):
         self.assertEqual(first_req_fun(),'{\n  "authenticated": true, \n  "user": "user"\n}\n')
 
 if __name__ == '__main__':
