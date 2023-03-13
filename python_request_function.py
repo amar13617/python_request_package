@@ -16,10 +16,15 @@ def first_req_fun():
     #    return r.json()
     #return " "
     #return r.text # 6
-    if r.status_code == 200:
+    #if r.status_code == 200:#7
+    #    return r.text
+    #else:
+    #    return None
+    if r.status_code == 400:
         return r.text
     else:
         return None
+
 
 print(first_req_fun())
 class TestString(unittest.TestCase):
@@ -42,8 +47,10 @@ class TestString(unittest.TestCase):
     #def test_request_function6(self):
     #    self.assertEqual(first_req_fun(),'{\n  "authenticated": true, \n  "user": "user"\n}\n')
 
-    def test_request_function7(self):
-        self.assertEqual(first_req_fun(),'{\n  "authenticated": true, \n  "user": "user"\n}\n')
+    #def test_request_function7(self):#7
+    #    self.assertEqual(first_req_fun(),'{\n  "authenticated": true, \n  "user": "user"\n}\n')
+    #def test_request_function8(self):#8
+    #    self.assertEqual(first_req_fun(),None)
 
 if __name__ == '__main__':
     unittest.main()
