@@ -24,7 +24,7 @@ def first_req_fun():
     #    return r.text
     #else:
     #    return None
-
+    return r.headers['content-type']
 
 #print(first_req_fun())
 class TestString(unittest.TestCase):
@@ -53,8 +53,12 @@ class TestString(unittest.TestCase):
     #def test_request_function8(self):#8
     #    self.assertEqual(first_req_fun(),None)
 
-    #def test_request_function8(self):
+    #def test_request_function9(self):
     #    self.assertNotEqual(first_req_fun(),'{\n  "authenticated": true, \n  "user": "user"\n}\n')
+
+    def test_request_function10(self):
+        self.assertEqual(first_req_fun(),'application/json')
+
 
 if __name__ == '__main__':
     unittest.main()
