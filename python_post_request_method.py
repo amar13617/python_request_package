@@ -6,7 +6,7 @@ def request_func():
     #return resp.ok #1
     #return resp.text #2
     #return resp.encoding
-    return resp.headers['content-type']
+    #return resp.headers['content-type']
 
 print(request_func())
 
